@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Insertion</title>
+</head>
+<body>
+    <center>
+        <h1>Insertion of Employee Data</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="dn">Enter Dno</label>
+            <select name="dn" id="dn">
+                {% for do in LDO %}
+                    <option value="{{do.dno}}">{{do.dno}}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <label for="en">Enter Eno</label>
+            <input type="number" name="en" id="en">
+            <br><br>
+
+            <label for="enam">Enter Ename</label>
+            <input type="text" name="enam" id="enam">
+            <br><br>
+
+            <label for="ej">Enter Ejob</label>
+            <input type="text" name="ej" id="ej">
+           <br><br> 
+
+            <label for="esl">Enter ESal</label>
+            <input type="number" name="esl" id="esl">
+            <br><br>
+
+            <input type="submit" value="Insert Employee">
+
+
+        </form>
+    </center>
+</body>
+</html>

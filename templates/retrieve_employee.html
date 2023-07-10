@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieving Employee</title>
+</head>
+<body>
+    <center>
+        <h1>Retrieving of Employee Data</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="dn">Enter Dno</label>
+            <select name="dn" id="dn" multiple>
+                {% for do in LRO %}
+                    <option value="{{do.dno}}">{{do.dno}}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+
+            <input type="submit" value="Retrieve Employee">
+            
+        </form>
+    </center>
+</body>
+</html>

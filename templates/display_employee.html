@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Employee</title>
+</head>
+<body>
+    <center>
+        <h1>Displaying of Employee Details</h1>
+        <table border="4px" cellpadding="5px" cellspacing="5px">
+            <tr>
+                <th>Deptno</th>
+                <th>Empno</th>
+                <th>Empname</th>
+                <th>Empjob</th>
+                <th>Empsal</th>
+            </tr>
+            {% for eo in RDOS %}
+                <tr>
+                    <td>{{eo.dno}}</td>
+                    <td>{{eo.eno}}</td>
+                    <td>{{eo.ename}}</td>
+                    <td>{{eo.ejob}}</td>
+                    <td>{{eo.esal}}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </center>   
+</body>
+</html>
